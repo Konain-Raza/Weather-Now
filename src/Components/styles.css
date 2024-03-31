@@ -1,0 +1,71 @@
+#app {
+  height: 100%;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: transparent;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  
+}
+.weatherPage{
+  position: relative;
+}
+.currentWeatherText{
+  position: absolute;
+  left: 2%;
+  display: block;
+  /* background-color: aliceblue; */
+width: 100%;
+height: 40%;
+
+}
+#forecastBox{
+
+  position: absolute;
+right: 5%;
+top: 80%;
+  flex-direction: column;
+  width: 55%;
+  display: flex;
+  justify-content:space-between;
+}
+.weathericon img{
+  /* background-color: aliceblue; */
+  width: 100%;
+}
+.swiper {
+  display: flex;
+  align-items: center;
+display: flex;
+justify-content: center;
+align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  /* background: red; */
+width: 20%;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
