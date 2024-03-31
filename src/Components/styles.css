@@ -16,6 +16,53 @@ body {
   padding: 0;
   
 }
+.windSpeed img {
+  position: absolute;
+  /* background-color: aqua; */
+ left: 5%;
+ width: 32%;
+ height: 32%;
+ /* position: relative; */
+}
+
+#windtext{
+  /* font-size: 2rem; */
+  position: absolute;
+  right: 4%;
+  top: 47%;
+}
+#humidtext{
+  margin-top: 2.7vh;
+  margin-left: 7vw;
+}
+#windhumidBoxes{
+  margin-top: 1vh;
+  padding: 0%;
+gap: 2vw;
+  width: 35%;
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.windSpeed{
+  
+  position: relative;
+  border-radius: 40px;
+  padding-top: 39px;
+  width: 50%;
+  border: none;
+  color: white ; 
+  border-radius: 50px;
+  height: 70%;
+  
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: aqua !important; */
+  
+}
 .weatherPage{
   position: relative;
 }
@@ -41,6 +88,30 @@ top: 80%;
 .weathericon img{
   /* background-color: aliceblue; */
   width: 100%;
+  
+}
+#sun-box img{
+  width: 40%;
+  height: 80%;
+  /* background-color: #000; */
+}
+#sunbox-wrapper{
+  display: flex;
+  width: 20vw;
+  justify-content: space-between;
+}
+#sun-box{
+  color: white;
+  font-weight: bold;
+  margin-top: 1vh;
+  width: 8vw;
+  /* background-color: #000; */
+  height: 10vh;
+justify-content: space-between;
+  display: flex;
+}
+#sun-box h2{
+  margin-top: 1vh;
 }
 .swiper {
   display: flex;
