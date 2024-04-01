@@ -56,15 +56,9 @@ const [loading, setLoading] = useState(true);
       setTemperature((parseFloat(data.main.temp) - 273.15).toFixed(2));
     } 
     else {
-      setCity(""); 
+      
       alert("City not found. Please enter a valid city.");
-      setDescription("");
-      setHumidity("");
-      setTemperature("");
-      setWindspeed("");
-      setSunrise("");
-      setSunset("");
-      setInputValue("");
+
     
     }
     } catch (error) {
@@ -72,18 +66,16 @@ const [loading, setLoading] = useState(true);
     }
   };
   useEffect(() => {
-    // Set loading state to false after a short period (e.g., 1 second)
     const timeout = setTimeout(() => {
       setLoading(false);
-    }, 1500); // Adjust the timeout duration as needed
-
+    }, 1500); 
     return () => clearTimeout(timeout); 
   }, []);
   useEffect(() => {
     if (city) {
       handleSearch();
     }
-  }, [city]); // Empty dependency array for initial load
+  }, [city]); 
 
   useEffect(() => {
     console.log("Description:", description);
@@ -101,9 +93,9 @@ const [loading, setLoading] = useState(true);
       "moderate rain": showerRainVideo
     };
 
-  const normalizedDescription = description.toLowerCase(); // Normalize description to lowercase
+  const normalizedDescription = description.toLowerCase(); 
 
-  // Check if the normalized description exists in videos object
+  
   const videoUrl = videos[normalizedDescription] || clearSkyVideo;
 
     setVideoUrl(videoUrl);
@@ -113,7 +105,7 @@ const [loading, setLoading] = useState(true);
 
   return (
     <div>
-      {loading ? ( // If loading is true, render the loading component
+      {loading ? ( 
         <SplashScreen/>
       ) : (
         <div  id="bg-video" className="relative w-full h-screen weatherPage">
