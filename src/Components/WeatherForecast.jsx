@@ -18,7 +18,7 @@ function WeatherForecast({ city }) {
   useEffect(() => {
     const fetchForecastData = async () => {
       try {
-        console.log("kk" + city);
+        // console.log("kk" + city);
         const apiKey = "1e0359603f0a1d43bc120cab4d8fd705";
         const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
         const response = await fetch(url);
@@ -34,8 +34,9 @@ function WeatherForecast({ city }) {
   }, [city]);
 
   return (
+    
     <div className="text-white h-auto " id="forecastBox">
-      <h1 className="text-5xl font-bold mb-7">Forecast</h1>
+      <h1 className="text-5xl font-bold mb-5">Forecast</h1>
       {error && <p>{error}</p>}
       {forecastData && forecastData.list && (
         <Swiper spaceBetween={10} slidesPerView="auto" freeMode={true}>
@@ -64,9 +65,9 @@ function WeatherForecast({ city }) {
                     <div className="flex flex-col">
                       <div className="my-5">
                         <div className="flex flex-col justify-center items-center">
-                          <div>
+                          <div id="weather-icon" className="">
                             <img
-                              className="weathericon p-3"
+                            
                               src={iconUrl}
                               alt="Weather Icon"
                             />

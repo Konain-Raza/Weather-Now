@@ -1,6 +1,15 @@
+
+@font-face {
+    font-family: 'Akony';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Akony'), url('./assets/akony.otf') format('otf');
+  }
 #app {
   height: 100%;
 }
+
+
 html,
 body {
   position: relative;
@@ -45,6 +54,11 @@ gap: 2vw;
   justify-content: center;
   align-items: center;
 }
+#bg-video video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .windSpeed{
   
   position: relative;
@@ -79,7 +93,7 @@ height: 40%;
 
   position: absolute;
 right: 5%;
-top: 80%;
+top: 90%;
   flex-direction: column;
   width: 55%;
   display: flex;
@@ -92,7 +106,9 @@ top: 80%;
 }
 #sun-box img{
   width: 40%;
-  height: 80%;
+  height: 70%;
+  margin-left: -10px;
+  /* margin-right: 0px; */
   /* background-color: #000; */
 }
 #sunbox-wrapper{
@@ -139,4 +155,143 @@ width: 20%;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+#weather-icon{
+  width: 80%;
+  height: 80%; 
+}
+#weather-icon img{
+width: 100px;
+height: 100px;
+}
+
+.app-loader {
+  margin-top: 50vh;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: relative;
+  
+}
+
+.global-loader-container {
+  position: absolute;
+  z-index: 1;
+  top: -45px;
+  height: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  height: 50px;
+  overflow: hidden;
+}
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease; /* Adjust the duration and timing function as needed */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.global-loader {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+  left: 50%;
+  margin-left: -50px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.global-loader .ring {
+  border-radius: 50%;
+  position: absolute;
+  border-width: 10px;
+  border-style: solid;
+  top: 50%;
+  left: 50%;
+}
+.global-loader .ring:nth-child(1) {
+  border-color: transparent #ff8a50 #ff8a50 transparent;
+  width: 48px;
+  height: 48px;
+  margin-left: -24px;
+  margin-top: -24px;
+  -webkit-animation: loader-ring 1s ease-in 0s infinite;
+  animation: loader-ring 1s ease-in 0.2s infinite;
+}
+.global-loader .ring:nth-child(2) {
+  border-color: transparent #ffc930 #ffc930 transparent;
+  width: 66px;
+  height: 66px;
+  margin-left: -33px;
+  margin-top: -33px;
+  -webkit-animation: loader-ring 1s ease-in -0.1s infinite;
+  animation: loader-ring 1s ease-in 0.1s infinite;
+}
+.global-loader .ring:nth-child(3) {
+  border-color: transparent #8cd9d6 #8cd9d6 transparent;
+  width: 84px;
+  height: 84px;
+  margin-left: -42px;
+  margin-top: -42px;
+  -webkit-animation: loader-ring 1s ease-in -0.2s infinite;
+  animation: loader-ring 1s ease-in 0s infinite;
+}
+
+@-webkit-keyframes loader-ring {
+  0% {
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+  }
+  30% {
+    -webkit-transform: rotate(170deg);
+    -ms-transform: rotate(170deg);
+    transform: rotate(170deg);
+  }
+  70% {
+    -webkit-transform: rotate(190deg);
+    -ms-transform: rotate(190deg);
+    transform: rotate(190deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    -ms-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes loader-ring {
+  0% {
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+  }
+  30% {
+    -webkit-transform: rotate(170deg);
+    -ms-transform: rotate(170deg);
+    transform: rotate(170deg);
+  }
+  70% {
+    -webkit-transform: rotate(190deg);
+    -ms-transform: rotate(190deg);
+    transform: rotate(190deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    -ms-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+#app-loader{
+  position: relative; z-index: 2;
+}
+#app-splash{
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #0c9c97; color: #fff; text-align: center;
 }
