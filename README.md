@@ -44,9 +44,10 @@ Explore WeatherNow on the live site: [WeatherNow Live](https://weather-now-vite.
     npm start
     ```
 5. **Open the project in VS Code to edit:**
-  ```bash
+   ```bash
     code .
     ```
+
 6. **Open [http://localhost:3000](http://localhost:3000) to view it in the browser.**
 
 ## Usage
