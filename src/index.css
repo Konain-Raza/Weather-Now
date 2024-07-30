@@ -1,0 +1,23 @@
+
+@tailwind base;
+@font-face {
+    font-family: 'Monserrat';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Monserrat'), url('./assets/Montserrat-VariableFont_wght.ttf') format('woff');
+  }
+
+@font-face {
+  font-family: 'Akony';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Akony'), url('./assets/akony.otf') format('otf');
+}
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    font-family: Monserrat;
+    overflow-x: hidden;
+}
