@@ -67,7 +67,7 @@ gap: 2vw;
 .windSpeed{
   
   position: relative;
-  border-radius: 40px;
+  border-radius: 20px;
   padding-top: 39px;
   width: 100%;
   border: none;
@@ -78,7 +78,6 @@ gap: 2vw;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: aqua !important; */
   
 }
 .weatherPage{
@@ -87,9 +86,10 @@ gap: 2vw;
 .currentWeatherText{
   display: flex;
   position: absolute;
-  left: 2%;
+margin: auto;
   display: block;
 width: 100%;
+padding: 30px;
 height: 40%;
 
 }
@@ -340,6 +340,7 @@ height: 100px;
   }
   #windhumidBoxes{
     margin: auto;
+    
 width: 90%;
   }
 
@@ -380,8 +381,9 @@ height: 50%;
     width: 60%;
     height: 80%;
     margin-top: 1vh;
-    margin-left: -10px;
+    /* margin-left: -10px; */
     /* margin-right: 0px; */
     /* background-color: #000; */
   }
+  
 }
